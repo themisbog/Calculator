@@ -1,3 +1,14 @@
+html,body{
+    padding:0;
+    margin:0;
+    height:100%;
+}body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: url("./images/313022.jpg");
+    font-family:'Times New Roman', Times, serif ;
+}
 .calculator{
     background: lightGrey;
     width: max-content;
@@ -9,7 +20,7 @@
 }
 input{
     display: flex;
-    align-self: self-start;
+    align-self: self-end;
     width:400px;
     height:30px
 }
@@ -26,10 +37,11 @@ input{
 }
 
 button{
-  border-radius: 15px;  
+  border-radius:25px;  
   flex: 1 25%;
-  padding: 15px;
-  font-size:15px;
+  padding: 15px 10px;
+  font-size:25px;
+  width: 30px;
 
 } 
 .op-btn{
