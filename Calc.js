@@ -60,8 +60,10 @@ let operator = null;             // Current math symbol
  */
 buttons.forEach((numBtn) => {
   numBtn.addEventListener("click", () => {
+   if (currentDisplayValue.length < 15) { 
    currentDisplayValue+=numBtn.textContent;
    display.value=currentDisplayValue;
+   }
    if(currentDisplayValue!==firstNum){
     secndNum=currentDisplayValue;
    }
@@ -127,10 +129,11 @@ function handleDecimal() {
     if (currentDisplayValue.includes('.')) return;
 
     // UX Enhancement: If screen is empty, start with "0."
-    if (currentDisplayValue === '') {
+    if (currentDisplayValue.length < 15) {
+        if (currentDisplayValue === '') {
         currentDisplayValue = '0';
     }
-
+    }
     currentDisplayValue += '.';
     display.value = currentDisplayValue;
 }
